@@ -31,11 +31,11 @@ cd Automated-OMR-System
 
 2. Install dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 3. Run the Streamlit app:
 
-streamlit run app.py
+   streamlit run app.py
 
 4. Upload OMR sheets in the web interface to see scores and overlay images.
 
