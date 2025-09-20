@@ -26,8 +26,8 @@ Installation
 
 1. Clone the repository:
 
-git clone https://github.com/Night-E-ye/Automated-OMR-System.git
-cd Automated-OMR-System
+   git clone https://github.com/Night-E-ye/Automated-OMR-System.git
+   cd Automated-OMR-System
 
 2. Install dependencies:
 
@@ -40,7 +40,9 @@ cd Automated-OMR-System
 4. Upload OMR sheets in the web interface to see scores and overlay images.
 
 
+
 Example Output 
+
 
 Per-subject scores:
 {
@@ -50,7 +52,9 @@ Per-subject scores:
   "English": 1,
   "General": 5
 }
+
 Total score: 5
+
 
 Overlay images show green rectangles for filled bubbles and red rectangles for empty bubbles.
 
