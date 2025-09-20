@@ -18,7 +18,7 @@ def evaluate_omr(image_path, answer_key, template):
         - overlay: image with detected bubbles highlighted
     """
 
-    # 1️⃣ Read and preprocess image
+    # 1 Read and preprocess image
     img = cv2.imread(image_path)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     _, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV)
@@ -27,7 +27,7 @@ def evaluate_omr(image_path, answer_key, template):
     overlay = img.copy()
     filled_threshold = 0.2  # fraction of area to consider bubble filled
 
-    # 2️⃣ Detect filled bubbles for each question
+    # 2️ Detect filled bubbles for each question
     for q in template["questions"]:
         selected_option = None
 
@@ -47,7 +47,7 @@ def evaluate_omr(image_path, answer_key, template):
 
         student_answers.append(selected_option)
 
-    # 3️⃣ Calculate per-subject scores
+    # 3️ Calculate per-subject scores
     subject_scores = {}
     for subject, bounds in template["subjects"].items():
         correct = 0
@@ -56,12 +56,12 @@ def evaluate_omr(image_path, answer_key, template):
                 correct += 1
         subject_scores[subject] = correct
 
-    # 4️⃣ Calculate total score correctly (use General if defined)
+    # 4️ Calculate total score correctly (use General if defined)
     total_score = subject_scores.get("General", sum(
         subject_scores[subject] for subject in template["subjects"] if subject != "General"
     ))
 
-    # 5️⃣ Return results
+    # 5️ Return results
     result = {
         "student_answers": student_answers,
         "subject_scores": subject_scores,
@@ -70,6 +70,7 @@ def evaluate_omr(image_path, answer_key, template):
     }
 
     return result
+
 
 
 
