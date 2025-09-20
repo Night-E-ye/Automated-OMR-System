@@ -40,7 +40,8 @@ cd Automated-OMR-System
 4. Upload OMR sheets in the web interface to see scores and overlay images.
 
 
-Example Output
+Example Output 
+
 Per-subject scores:
 {
   "Math": 2,
@@ -50,6 +51,7 @@ Per-subject scores:
   "General": 5
 }
 Total score: 5
+
 Overlay images show green rectangles for filled bubbles and red rectangles for empty bubbles.
 
 
