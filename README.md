@@ -1,39 +1,43 @@
-# Automated-OMR-System
-Automated OMR Evaluation &amp; Scoring System using Python and OpenCV. Upload OMR sheets via web interface, detect filled bubbles, calculate per-subject and total scores, visualize results with overlays, and export CSV. Fast, accurate, and ideal for hackathons, exams, and placement assessments.
+Automated OMR Evaluation & Scoring System
 
-#Project Overview
+Project Overview
 
-The Automated OMR Evaluation & Scoring System is a Python-based web application designed to automate grading of OMR (Optical Mark Recognition) sheets. Traditional manual evaluation is time-consuming, error-prone, and resource-intensive. This system enables evaluators to process large batches of OMR sheets quickly and accurately, making it ideal for hackathons, schools, universities, and placement assessments.
+The Automated OMR Evaluation & Scoring System is a Python-based web application that automates the grading of OMR (Optical Mark Recognition) sheets. Using OpenCV and NumPy, it detects filled bubbles (A/B/C/D), calculates per-subject and total scores, and generates overlay images for visual verification. Built with a Streamlit web interface, it supports multiple subjects, sheet versions, and customizable answer keys. Evaluators can upload OMR sheets, view results instantly, and export scores as CSV. This system reduces manual errors, speeds up evaluation, and is ideal for hackathons, educational institutions, and placement readiness assessments.
 
-#Features
+Features
 
-Upload OMR sheets through a Streamlit web interface.
+Upload OMR sheets via Streamlit web interface
 
-Automatic detection of filled bubbles (A/B/C/D) using OpenCV.
+Automatic detection of filled bubbles (A/B/C/D)
 
-Calculates per-subject scores and total score.
+Per-subject and total score calculation
 
-Generates overlay images showing detected bubbles (green = filled, red = empty).
+Overlay visualization of detected bubbles (green = filled, red = empty)
 
-Supports multiple subjects, sheet versions, and customizable answer keys.
+Supports multiple subjects and sheet versions
 
-Export results as CSV for easy record-keeping.
+Export results as CSV
 
-Flexible JSON template for question layout and coordinates.
+Flexible JSON template for question layout and answer keys
 
-#Tech Stack
+Tech Stack
 
-Python 3.x – core programming language
+Python 3.x
 
-OpenCV – image preprocessing and bubble detection
+OpenCV – image processing and bubble detection
 
-NumPy – data manipulation and calculations
+NumPy – data manipulation
 
-Streamlit – interactive web application
+Streamlit – web interface
 
-JSON – configurable templates for questions and subjects
+JSON – template configuration
 
+Installation
 
+Clone the repository:
+
+git clone https://github.com/Night-E-ye/Automated-OMR-System.git
+cd Automated-OMR-System
 
 
 Install dependencies:
@@ -46,23 +50,7 @@ Run the Streamlit app:
 streamlit run app.py
 
 
-Upload OMR sheets in the web interface and view results.
-
-Usage
-
-Upload OMR sheet images (JPEG/PNG).
-
-The system automatically detects filled bubbles.
-
-View per-subject scores, total score, and overlay image.
-
-Download CSV results for record-keeping.
-
-Template & Answer Key
-
-Define question layout, options, and subjects in templates/template.json.
-
-Provide the correct answers in answer_key for evaluation.
+Upload OMR sheets in the web interface to see scores and overlay images.
 
 Example Output
 Per-subject scores:
@@ -76,7 +64,7 @@ Per-subject scores:
 Total score: 5
 
 
-Overlay image shows green rectangles on filled bubbles, red rectangles on empty ones.
+Overlay images show green rectangles for filled bubbles and red rectangles for empty bubbles.
 
 License
 
